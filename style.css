@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding:110px 110px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    /* flex-flow: row wrap; */
+}
+#comment{
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-size:larger;
+}
+#title{
+    font-family: 'PT Serif', serif;
+    font-size: xx-large;
+}
+#comspan{
+    font-weight: bold;
+}
+
+.crewgrid{
+    display: grid;
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:0.25fr 0.75fr 0.25fr 0.25fr 0.75fr  0.25fr;
+    grid-template-areas: "mem1 . mem3"
+                         "mem1 mem2 mem3"
+                         ". mem2 ."
+                         "mem4 . mem6"
+                         "mem4 mem5 mem6"
+                         ". mem5 .";
+                     
+    grid-gap: 10px;
+}
+.crew{
+    
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+
+
+}
+img{
+    width: 300px ;
+    height: 430px;
+    border-radius: 10px;
+    
+}
+#crew1{
+    grid-area: mem1;
+
+    
+
+}
+#crew2{
+    grid-area: mem2;
+
+}
+#crew3{
+    grid-area: mem3;
+}
+#crew4{
+    grid-area: mem4;
+    
+}
+#crew5{
+    grid-area: mem5;
+  
+
+}
+#crew6{
+    grid-area: mem6;
+    
+
+}
+
+
+.memspan{
+    position: absolute;
+    right: 100%;
+    writing-mode: vertical-lr;
+    font-family: 'PT Serif', serif;
+    font-size: smaller;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 900px){
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .crewgrid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:0.25fr 0.75fr 0.25fr 0.25fr 0.75fr  0.25fr;
+        grid-template-areas: "mem1 ."
+                             "mem1 mem2"
+                             ". mem2"
+                             "mem3 ."
+                             "mem3 mem4"
+                             ". mem4"
+                             "mem5 ."
+                             "mem5 mem6"
+                             ". mem6"
+    }
+
+    #crew1{
+        grid-area: mem1;
+    
+        
+    
+    }
+    #crew2{
+        grid-area: mem2;
+    
+    }
+    #crew3{
+        grid-area: mem3;
+    }
+    #crew4{
+        grid-area: mem4;
+        
+    }
+    #crew5{
+        grid-area: mem5;
+      
+    
+    }
+    #crew6{
+        grid-area: mem6;
+        
+    
+    }
+    
+    .memspan{
+        position: absolute;
+        right: 100%;
+        /* writing-mode: vertical-lr; */
+        font-family: 'PT Serif', serif;
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 650px){
+
+.crewgrid{
+    display: flex;
+    flex-direction: column;
+}
+
+}
