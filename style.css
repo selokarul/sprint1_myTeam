@@ -26,6 +26,7 @@ body{
 }
 
 .crewgrid{
+    /* border: 2px solid black; */
     display: grid;
     margin-top: 10%;
     width: 100%;
@@ -42,7 +43,11 @@ body{
     grid-gap: 10px;
 }
 .crew{
-    
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
     box-sizing: border-box;
     position: relative;
     width: 100%;
@@ -50,8 +55,12 @@ body{
 
 }
 img{
-    width: 300px ;
-    height: 430px;
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+    /* border: 2px solid blue; */
+    width: 250px ;
+    height: auto;
     border-radius: 10px;
     
 }
@@ -85,8 +94,9 @@ img{
 
 
 .memspan{
+    top: 0;
+    right: 0;
     position: absolute;
-    right: 100%;
     writing-mode: vertical-lr;
     font-family: 'PT Serif', serif;
     font-size: smaller;
@@ -96,7 +106,7 @@ h2{
     font-family: 'Poppins', sans-serif;
 }
 
-@media (max-width: 900px){
+ @media (max-width: 992px){
     .header{
         display: flex;
         flex-direction: column;
@@ -156,7 +166,7 @@ h2{
     }
 }
 
-@media (max-width: 650px){
+@media (max-width: 768px){
 
 .crewgrid{
     display: flex;
